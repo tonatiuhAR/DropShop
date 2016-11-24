@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DropShop</string>
+    <!-- usar en caso de acento o ñ: -->
+    <!--Á	\u00C1	A con acento
+        á	\u00E1	a con acento
+        É	\u00C9	E con acento
+        é	\u00E9	e con acento
+        Í	\u00CD	I con acento
+        í	\u00ED	i con acento
+        Ó	\u00D3	O con acento
+        ó	\u00F3	o con acento
+        Ú	\u00DA	U con acento
+        ú	\u00FA	u con acento
+        Ü	\u00DC	U con dieress
+        ü	\u00FC	u con dieresis
+        ñ 	\u00F1	n con tilde
+        Ñ   \u00D1  N con tilde -->
+    <!-- usar en caso de acento o ñ: -->
+
+    <!--categorias-->
+    <string name="pedidos">Ordenes</string>
+    <string name="inventarios">Inventario</string>
+    <string name="ventas">Ventas</string>
+    <!--categorias-->
+
+    <!--fab Texts-->
+    <string name="agendar_pedido">Programar pedido</string>
+    <string name="stock">Existencia</string>
+    <string name="agregar_venta">Agregar Venta</string>
+    <!--fab Texts-->
+
+    <!--acercade-->
+    <string name="developed_by">Desarrollado por:</string>
+    <string name="rawr_studio">Rawr Studio</string>
+    <!--acercade-->
+</resources>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context="com.rawr.dropshop.AcercaDe">
+       <!-- android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin"-->
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/silueta_rawr"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:foregroundGravity="bottom|right"
+        android:id="@+id/imageView2" />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rawr_studio"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/contacto_rawr"
+            android:layout_below="@+id/tv_develop"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/blanco"
+            android:textSize="35dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/developed_by"
+            android:id="@+id/tv_develop"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="6dp"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="AQUI NO SE QUE PONERLE\n
+no se como pusiste la imagen en la LFA
+me daba un chingo de espacio y ahorita
+a la brava le meti un padding a lo pendejo
+para que si lo pegara a la derecha XD"
+            android:id="@+id/textView2"
+            android:textColor="@color/blanco"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"/>
+
+
+    </RelativeLayout>

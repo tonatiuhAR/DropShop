@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">DropShop</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--categorias-->
+    <string name="pedidos">Orders</string>
+    <string name="inventarios">Inventory</string>
+    <string name="ventas">Sales</string>
+    <!--categorias-->
+
+    <!--fab Texts-->
+    <string name="agendar_pedido">Schedule Order</string>
+    <string name="stock">Stock</string>
+    <string name="agregar_venta">Add Sale</string>
+    <!--fab Texts-->
+
+    <!--acercade-->
+    <string name="developed_by">Developed by:</string>
+    <string name="rawr_studio">Rawr Studio</string>
+    <!--acercade-->
+</resources>
