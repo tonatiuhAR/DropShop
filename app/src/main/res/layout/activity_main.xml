@@ -89,7 +89,8 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="215dp"
         android:layout_marginRight="60dp"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,7 +100,8 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="155dp"
         android:layout_marginRight="72dp"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -109,7 +111,8 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="95dp"
         android:layout_marginRight="66dp"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:textColor="@color/colorPrimaryText" />
 
 
 </android.support.design.widget.CoordinatorLayout>
