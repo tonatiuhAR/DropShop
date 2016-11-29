@@ -18,5 +18,9 @@
     <!--acercade-->
     <string name="developed_by">Developed by:</string>
     <string name="rawr_studio">Rawr Studio</string>
+    <string name="acerca_de">About</string>
     <!--acercade-->
+
+    <string name="categorias">Categories</string>
+    <string name="todos_menu">All</string>
 </resources>

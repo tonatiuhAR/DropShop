@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.AcercaDeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/silueta_rawr">
+
+        <TextView
+            android:id="@+id/contacto_rawr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_develop"
+            android:layout_centerHorizontal="true"
+            android:text="@string/rawr_studio"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/blanco"
+            android:textSize="35dp" />
+
+        <TextView
+            android:id="@+id/tv_develop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp"
+            android:text="@string/developed_by"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/blanco"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="AQUI NO SE QUE PONERLE\n
+no se como pusiste la imagen en la LFA
+me daba un chingo de espacio y ahorita
+a la brava le meti un padding a lo pendejo
+para que si lo pegara a la derecha XD"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/blanco" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

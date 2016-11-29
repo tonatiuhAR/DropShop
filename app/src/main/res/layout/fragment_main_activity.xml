@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="layout.MainActivityFragment">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabGravity="center"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@style/MyTabThemeStyle"></android.support.design.widget.TabLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_orden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="195dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:elevation="6dp"
+            android:rotationY="180"
+            android:src="@drawable/ic_action_order"
+            android:visibility="invisible"
+            app:pressedTranslationZ="12dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="135dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:elevation="6dp"
+            android:src="@drawable/icon_package"
+            android:visibility="invisible"
+            app:pressedTranslationZ="12dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_ventas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="75dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:elevation="6dp"
+            android:src="@drawable/ic_action_sales"
+            android:visibility="invisible"
+            app:pressedTranslationZ="12dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:elevation="6dp"
+            android:src="@drawable/ic_action_name"
+            app:pressedTranslationZ="12dp" />
+
+        <TextView
+            android:id="@+id/fab_ventas_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="215dp"
+            android:layout_marginRight="60dp"
+            android:text="@string/agendar_pedido"
+            android:textColor="@color/colorPrimaryText"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fab_in_stock_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="155dp"
+            android:layout_marginRight="72dp"
+            android:text="@string/stock"
+            android:textColor="@color/colorPrimaryText"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/fab_orden_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="95dp"
+            android:layout_marginRight="66dp"
+            android:text="@string/agregar_venta"
+            android:textColor="@color/colorPrimaryText"
+            android:visibility="gone" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</FrameLayout>

@@ -1,124 +1,138 @@
 package com.rawr.dropshop;
 
-import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.TextView;
 
-import com.rawr.dropshop.adapters.ViewPagerAdapter;
-import com.rawr.dropshop.fragments.Inventarios;
-import com.rawr.dropshop.fragments.Pedidos;
-import com.rawr.dropshop.fragments.Ventas;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import layout.AcercaDeFragment;
+import layout.TotalPedidosFragment;
+import layout.TotalVentasFragment;
+import layout.MainActivityFragment;
 
 public class MainActivity extends AppCompatActivity {
-    Toolbar toolbarMain;
-    TabLayout tabLayoutMain;
-    ViewPager viewPagerMain;
-    ViewPagerAdapter viewPagerAdapter;
-
-    FloatingActionButton fabPlus, fabOrder, fabStock, fabSales;
-    TextView tvOrder, tvStock, tvSales;
-
-    Animation fabOpen, fabClose, fabClockWise, fabAntiClockWise;
-    boolean isOpen= false;
+    @BindView(R.id.toolBar_main)
+    Toolbar toolBarMain;
+    @BindView(R.id.navview)
+    NavigationView navview;
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         iniGUImain();
         llamarListenersMain();
     }
 
-    public void iniGUImain(){
-        fabPlus = (FloatingActionButton)findViewById(R.id.fab_plus);
-        fabOrder = (FloatingActionButton)findViewById(R.id.fab_orden);
-        fabStock = (FloatingActionButton)findViewById(R.id.fab_stock);
-        fabSales = (FloatingActionButton)findViewById(R.id.fab_ventas);
-        tvOrder = (TextView)findViewById(R.id.fab_orden_text);
-        tvStock = (TextView)findViewById(R.id.fab_in_stock_text);
-        tvSales = (TextView)findViewById(R.id.fab_ventas_text);
-        fabOpen = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
-        fabClose = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
-        fabClockWise = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_clockwise);
-        fabAntiClockWise = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anticlockwise);
-        toolbarMain = (Toolbar)findViewById(R.id.toolBar_main);
-        setSupportActionBar(toolbarMain);
-        tabLayoutMain = (TabLayout)findViewById(R.id.tabLayout_main);
-        viewPagerMain = (ViewPager)findViewById(R.id.view_pager_main);
-        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragments(new Pedidos(), getResources().getString(R.string.pedidos));
-        viewPagerAdapter.addFragments(new Inventarios(), getResources().getString(R.string.inventarios));
-        viewPagerAdapter.addFragments(new Ventas(), getResources().getString(R.string.ventas));
-        viewPagerMain.setAdapter(viewPagerAdapter);
-        tabLayoutMain.setupWithViewPager(viewPagerMain);
+    public void iniGUImain() {
+
+        /*llenar fragment main*/
+        Fragment fragmentMain = new MainActivityFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragmentMain).commit();
+
+        /**/
+
+        setSupportActionBar(toolBarMain);
+
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
-    public void llamarListenersMain(){
-        fabPlus.setOnClickListener(new View.OnClickListener() {
+    public void llamarListenersMain() {
+
+        /*Listener de menu lateral*/
+        navview.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                if(isOpen){
-                    fabSales.startAnimation(fabClose);
-                    fabSales.setClickable(false);
-                    tvSales.startAnimation(fabClose);
-                    tvSales.setVisibility(View.GONE);
-                    fabStock.startAnimation(fabClose);
-                    fabStock.setClickable(false);
-                    tvStock.startAnimation(fabClose);
-                    tvStock.setVisibility(View.GONE);
-                    fabOrder.startAnimation(fabClose);
-                    fabOrder.setClickable(false);
-                    tvOrder.startAnimation(fabClose);
-                    tvOrder.setVisibility(View.GONE);
-                    fabPlus.startAnimation(fabAntiClockWise);
-                    isOpen = false;
-                } else {
-                    fabSales.startAnimation(fabOpen);
-                    fabSales.setClickable(true);
-                    tvSales.startAnimation(fabOpen);
-                    fabStock.startAnimation(fabOpen);
-                    fabStock.setClickable(true);
-                    tvStock.startAnimation(fabOpen);
-                    fabOrder.startAnimation(fabOpen);
-                    fabOrder.setClickable(true);
-                    tvOrder.startAnimation(fabOpen);
-                    fabPlus.startAnimation(fabClockWise);
-                    isOpen = true;
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                boolean fragmentTransaction = false;
+                Fragment fragment = null;
+
+                /*AQUI VAN LAS OPCIONES DEL MENU*/
+                switch (item.getItemId()) {
+                    case R.id.menu_todos:
+                        fragment = new MainActivityFragment();
+                        fragmentTransaction = true;
+                        break;
+                    case R.id.menu_ventas:
+                        fragment = new TotalVentasFragment();
+                        fragmentTransaction = true;
+                        break;
+                    case R.id.menu_acerca_de:
+                        fragment = new AcercaDeFragment();
+                        fragmentTransaction = true;
+                        break;
+                    case R.id.menu_pedidos:
+                        fragment = new TotalPedidosFragment();
+                        fragmentTransaction = true;
+                        break;
                 }
+
+                if (fragmentTransaction) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).addToBackStack("MainActivityFragment").commit();
+
+
+                    int size = navview.getMenu().size();
+                    for (int i = 0; i < size; i++) {
+                        navview.getMenu().getItem(i).setChecked(false);
+                    }
+
+                    item.setChecked(true);
+                    getSupportActionBar().setTitle(item.getTitle());
+
+                    drawerLayout.closeDrawers();
+                }
+                return fragmentTransaction;
+
             }
+
+
         });
 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+
+        /*
+        getMenuInflater().inflate(R.menu.menu_main, menu);*/
         return true; /** true -> el menú ya está visible */
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.acercaDe) {
-            lanzarAcercaDe(null);
-            return true;
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+            //...
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void lanzarAcercaDe(View view){
-        Intent acercaDe = new Intent(this, AcercaDe.class);
-        startActivity(acercaDe);
+    @Override
+    public void onBackPressed() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 }

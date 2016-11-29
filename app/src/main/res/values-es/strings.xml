@@ -33,5 +33,10 @@
     <!--acercade-->
     <string name="developed_by">Desarrollado por:</string>
     <string name="rawr_studio">Rawr Studio</string>
+    <string name="acerca_de">Acerca De</string>
     <!--acercade-->
+
+    <string name="categorias">Categorias</string>
+    <string name="todos_menu">Todos</string>
+
 </resources>
