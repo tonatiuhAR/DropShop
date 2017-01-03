@@ -1,4 +1,4 @@
-package layout;
+package com.rawr.dropshop.views.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -65,7 +65,7 @@ public class TotalVentasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detalle_ventas, container, false);
+        return inflater.inflate(R.layout.fragment_total_ventas, container, false);
     }
 
 

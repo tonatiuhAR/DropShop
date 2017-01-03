@@ -14,26 +14,17 @@
             android:id="@+id/menu_ventas"
             android:icon="@drawable/ic_action_sales"
             android:title="@string/ventas" />
-
-        <item
-            android:id="@+id/menu_acerca_de"
-            android:title="@string/acerca_de"
-            android:icon="@android:drawable/ic_dialog_info" />
-
-    </group>
-    <group
-        android:id="@+id/menu_grupo_categorias"
-        android:visible="false">
         <item
             android:id="@+id/menu_categorias"
-            android:title="@string/categorias">
-            <menu>
-                <!-- aqui se agregarán las categorías-->
-                <item
-                    android:id="@+id/empty_categorias"
-                    android:title="@string/rawr_studio" />
-            </menu>
-        </item>
+            android:icon="@drawable/ic_local_offer_white_24dp"
+            android:title="@string/categorias" />
+        <item
+            android:id="@+id/menu_acerca_de"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="@string/acerca_de" />
+
+
     </group>
+
 
 </menu>

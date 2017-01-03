@@ -1,8 +1,10 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
-    tools:context="com.rawr.dropshop.fragments.Inventarios">
+    tools:context=".views.fragments.TotalCategoriasFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,29 +13,40 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/sad_face"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:gravity="center"
-            android:text="@string/no_inventory"
+            android:text="@string/no_categories"
             android:textAlignment="center"
             android:textColor="@color/colorSecondaryText"
             android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_above="@+id/sad_face"
-            />
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/sad_face"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:gravity="center"
             android:text="@string/face_sad"
             android:textAlignment="center"
             android:textColor="@color/colorSecondaryText"
             android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:textStyle="bold" />
 
     </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/buttonNewCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:elevation="6dp"
+        android:src="@drawable/ic_action_name"
+        app:pressedTranslationZ="12dp"/>
 
 </FrameLayout>

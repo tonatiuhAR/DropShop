@@ -21,6 +21,20 @@
     <string name="acerca_de">About</string>
     <!--acercade-->
 
+    <!--no data texts-->
+    <string name="no_orders">No orders</string>
+    <string name="no_inventory">No inventory</string>
+    <string name="no_sales">No sales</string>
+    <string name="no_categories">No categories</string>
+    <!--no data texts-->
+
+    <!--emoji text-->
+    <string name="face_sad">:(</string>
+    <!--emoji text-->
+
     <string name="categorias">Categories</string>
     <string name="todos_menu">All</string>
+    <string name="add__new_category">Add Category</string>
+
+
 </resources>

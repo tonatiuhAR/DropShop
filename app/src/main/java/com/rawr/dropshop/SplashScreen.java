@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 
+import com.rawr.dropshop.views.MainActivity;
+
 import java.util.Timer;
 import java.util.TimerTask;
 

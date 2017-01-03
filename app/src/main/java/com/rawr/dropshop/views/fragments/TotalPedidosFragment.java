@@ -1,4 +1,4 @@
-package layout;
+package com.rawr.dropshop.views.fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -13,12 +13,12 @@ import com.rawr.dropshop.R;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link AcercaDeFragment.OnFragmentInteractionListener} interface
+ * {@link TotalPedidosFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link AcercaDeFragment#newInstance} factory method to
+ * Use the {@link TotalPedidosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AcercaDeFragment extends Fragment {
+public class TotalPedidosFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +30,7 @@ public class AcercaDeFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public AcercaDeFragment() {
+    public TotalPedidosFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class AcercaDeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AcercaDeFragment.
+     * @return A new instance of fragment TotalPedidosFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AcercaDeFragment newInstance(String param1, String param2) {
-        AcercaDeFragment fragment = new AcercaDeFragment();
+    public static TotalPedidosFragment newInstance(String param1, String param2) {
+        TotalPedidosFragment fragment = new TotalPedidosFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +65,7 @@ public class AcercaDeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_acerca_de, container, false);
+        return inflater.inflate(R.layout.fragment_total_pedidos, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -80,7 +80,7 @@ public class AcercaDeFragment extends Fragment {
         super.onAttach(context);
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
-        } /*else {
+        }/* else {
             throw new RuntimeException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }*/

@@ -2,15 +2,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.rawr.dropshop.fragments.Pedidos">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/pedidos"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="@color/colorSecondaryText" />
+        android:layout_height="match_parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/no_orders"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/sad_face"
+            />
+        <TextView
+            android:id="@+id/sad_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/face_sad"
+            android:textAlignment="center"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/buttonNewOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:elevation="6dp"
+        android:src="@drawable/ic_action_name"
+        app:pressedTranslationZ="12dp" />
 </FrameLayout>

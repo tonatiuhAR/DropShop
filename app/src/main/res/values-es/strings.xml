@@ -36,7 +36,16 @@
     <string name="acerca_de">Acerca De</string>
     <!--acercade-->
 
+    <!--no data texts-->
+    <string name="no_orders">No hay \u00F3rdenes</string>
+    <string name="no_inventory">No hay inventario</string>
+    <string name="no_sales">No hay ventas</string>
+    <string name="no_categories">No hay categorias</string>
+    <!--no data texts-->
+
     <string name="categorias">Categorias</string>
     <string name="todos_menu">Todos</string>
+
+    <string name="add__new_category">Agregar Categor\u00EDa</string>
 
 </resources>
